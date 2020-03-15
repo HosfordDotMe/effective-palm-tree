@@ -349,7 +349,8 @@ button[type="submit"] {
   .salesperson-info i {
     font-size: inherit;
     transform: translateY(2px);
-    margin-right: 4px;
+    margin-left: 10px;
+    margin-right: 2px;
   }
 }
 
