@@ -1,0 +1,406 @@
+/* Variables */
+
+:root {
+  --almost-black: #333333;
+  --off-white: #fefefe;
+  --main-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  --hover-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Global */
+
+html {
+  scroll-behavior: smooth;
+  background: var(--off-white);
+}
+
+#main {
+  margin: auto;
+  padding: 15px;
+  max-width: 1080px;
+  color: var(--almost-black);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+  filter: none;
+}
+
+a:hover {
+  filter: opacity(0.6);
+}
+
+select {
+  border-color: gray;
+  text-transform: lowercase;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background: #00000088;
+}
+
+.modal-content {
+  background-color: var(--off-white);
+  border-radius: 4px;
+  margin: 15% auto;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 23px;
+}
+
+.modal-content div {
+  width: 100%;
+}
+
+.modal-content .close-button {
+  position: relative;
+  float: right;
+  right: auto;
+  font-size: 36px;
+  top: auto;
+}
+
+.modal-content img {
+  width: 200px;
+  margin-bottom: 16px;
+}
+
+button[type="submit"] {
+  background: lightseagreen;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+}
+
+.close-button:hover {
+  transform: rotate(90deg) translateY(-2px) translateX(2px);
+}
+
+/* Top Navigation Menu (Desktop Only) */
+
+.top-menu {
+  display: none;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: palevioletred;
+  color: var(--off-white);
+  z-index: 2;
+}
+
+.top-menu nav {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1080px;
+  margin: auto;
+  padding: 28px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.top-menu nav div {
+  width: 100%;
+  text-align: center;
+}
+
+.top-menu i {
+  font-size: inherit;
+  transform: translateY(2px);
+  margin-right: 4px;
+}
+
+@media (min-width: 860px) {
+  .top-menu {
+    display: block;
+  }
+
+  :target::before {
+    content: "";
+    display: block;
+    height: 92px;
+    margin-top: -92px;
+  }
+}
+
+/* Bottom Navigation Menu (Mobile Only) */
+
+.bottom-menu {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  background: palevioletred;
+  color: var(--off-white);
+  font-size: 36px;
+  z-index: 4;
+}
+
+.bottom-menu a:hover {
+  filter: none;
+}
+
+@media (min-width: 860px) {
+  .bottom-menu {
+    display: none;
+  }
+}
+
+/* Header Cards */
+
+#header {
+  margin: 0 auto 28px;
+  border-bottom: 1px solid var(--almost-black);
+}
+
+#header div {
+  font-weight: bold;
+  font-size: 42px;
+  text-align: center;
+}
+
+#header ul {
+  margin: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#header ul li {
+  margin: 14px 2px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  transition: 0.4s;
+  min-width: 250px;
+  font-weight: bold;
+  line-height: 1.2rem;
+  background: var(--off-white);
+  box-shadow: var(--main-box-shadow);
+  padding-bottom: 8px;
+}
+
+#header ul li:hover {
+  box-shadow: var(--hover-box-shadow);
+}
+
+#header ul li img {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+#header i {
+  font-size: inherit;
+  transform: translateY(2px);
+  margin-right: 4px;
+}
+
+/* Changes image size to keep in row for iPad */
+@media (min-width: 460px) and (max-width: 860px) {
+  #header ul li {
+    min-width: 200px;
+  }
+}
+
+/* Sidebar */
+
+.sidebar {
+  display: block;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: powderblue;
+  overflow-x: hidden;
+  padding: 0;
+  transition: 0.4s;
+}
+
+.sidebar .overview {
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.sidebar .feed li {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  background: var(--off-white);
+  box-shadow: var(--main-box-shadow);
+  transition: 0.4s;
+}
+
+.sidebar .feed li:hover {
+  box-shadow: var(--hover-box-shadow);
+}
+
+.sidebar .feed li img {
+  border-radius: 100%;
+  width: 54px;
+  margin-right: 8px;
+}
+
+/* Sales Team */
+
+#sales-team {
+  text-align: center;
+}
+
+#sales-team h2 {
+  font-size: 42px;
+}
+
+.salesperson-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.salesperson-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6px;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: var(--main-box-shadow);
+  min-width: 150px;
+  padding: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2rem;
+}
+
+.salesperson:hover {
+  box-shadow: var(--hover-box-shadow);
+}
+
+.salesperson-image img {
+  border-radius: 100%;
+  width: 90px;
+  margin-right: 8px;
+}
+
+.salesperson-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.salesperson-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (min-width: 860px) {
+  .salesperson-card {
+    min-width: 300px;
+    padding: 14px;
+  }
+
+  .salesperson-image img {
+    width: 160px;
+  }
+
+  .salesperson-info {
+    min-width: 250px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .salesperson-info i {
+    font-size: inherit;
+    transform: translateY(2px);
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 860px) {
+  .salesperson-info a span {
+    display: none;
+  }
+}
+
+/* Profile Modal */
+
+.profile-modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.4s linear;
+}
+
+.profile-modal .modal-content {
+  max-width: 300px;
+}
+
+.profile-modal circle {
+  fill: #ddd;
+  stroke: green;
+  stroke-width: 50;
+  stroke-dasharray: 0 158;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.profile-modal svg {
+  margin: 0 auto;
+  transform: rotate(-90deg);
+  background: #ddd;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Message Modal */
+
+.message-modal .modal-content {
+  max-width: 600px;
+}
+
+.message-modal i.logo {
+  font-size: 192px;
+  color: powderblue;
+  transition: visibility 0s, opacity 0.2s linear;
+}
+
+.message-modal input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--almost-black);
+}

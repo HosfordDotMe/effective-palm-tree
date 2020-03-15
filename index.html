@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/modern-normalize.css" />
+  <link rel="stylesheet" href="./css/fonts.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="./js/javascript.js"></script>
+</head>
+
+<body>
+  <div class="top-menu">
+    <nav>
+      <div>
+        <a href="#" onclick="toggleSidebar('close')">
+          <i class="material-icons">
+            home
+          </i>
+          Leaderboard
+        </a>
+      </div>
+      <div>
+        <a href="#sales-team" onclick="toggleSidebar('close')">
+          <i class="material-icons">
+            list
+          </i>
+          Sales Team
+        </a>
+      </div>
+      <div>
+        <a href="javascript:void(0)" onclick="toggleSidebar()">
+          <i class="material-icons menu-button">
+            menu_open
+          </i>
+          Overview
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div id="main">
+    <section id="header">
+      <div>
+        Sales leaderboard for
+        <select>
+          <option value="today">Today</option>
+          <option value="today">This week</option>
+          <option value="today">This Month</option>
+        </select>
+      </div>
+      <ul>
+        <li>
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" />
+          Abdullah Hadley<br />
+          122 closed deals<br />
+          <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box </i>View
+            profile</a>
+          <a href="javascript:void(0)" onclick="toggleModal('message')"><i class="material-icons"> message
+            </i>Message</a>
+        </li>
+        <li>
+          <img src="https://randomuser.me/api/portraits/women/4.jpg" />
+          Renee Sims<br />
+          102 closed deals<br />
+          <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box </i>View
+            profile</a>
+          <a href="javascript:void(0)" onclick="toggleModal('message')"><i class="material-icons"> message
+            </i>Message</a>
+        </li>
+        <li>
+          <img src="https://randomuser.me/api/portraits/women/6.jpg" />
+          Carys Metz<br />
+          90 closed deals<br />
+          <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box </i>View
+            profile</a>
+          <a href="javascript:void(0)" onclick="toggleModal('message')"><i class="material-icons"> message
+            </i>Message</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="sales-team">
+      <h2>Sales Team</h2>
+      <div class="salesperson-cards">
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/4.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Abdullah Hadley
+          </div>
+          <div class="salesperson-results">
+            122 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/women/4.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Renee Sims
+          </div>
+          <div class="salesperson-results">
+            102 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/women/6.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Carys Metz
+          </div>
+          <div class="salesperson-results">
+            90 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Eduard Franz
+          </div>
+          <div class="salesperson-results">
+            89 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/7.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Alexis Doreau
+          </div>
+          <div class="salesperson-results">
+            88 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/women/8.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Mia Denys
+          </div>
+          <div class="salesperson-results">
+            85 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/women/10.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Lourdes Browning
+          </div>
+          <div class="salesperson-results">
+            80 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/8.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Zachary Albright
+          </div>
+          <div class="salesperson-results">
+            79 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/9.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Tim Schoch
+          </div>
+          <div class="salesperson-results">
+            78 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/10.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Oscar Thomsen
+          </div>
+          <div class="salesperson-results">
+            75 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/women/11.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Vivianna Kiser
+          </div>
+          <div class="salesperson-results">
+            70 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Elena Satine
+          </div>
+          <div class="salesperson-results">
+            64 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/12.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Elliot Nolten
+          </div>
+          <div class="salesperson-results">
+            60 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/women/13.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Daniela Dewitt
+          </div>
+          <div class="salesperson-results">
+            58 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/women/14.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Chloe Sirko
+          </div>
+          <div class="salesperson-results">
+            55 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/16.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Kaine Hudson
+          </div>
+          <div class="salesperson-results">
+            50 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/21.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Stephane Moreau
+          </div>
+          <div class="salesperson-results">
+            40 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+        <div class="salesperson-card">
+          <div class="salesperson-image">
+            <img src="https://randomuser.me/api/portraits/men/29.jpg" />
+          </div>
+          <div class="salesperson-name">
+            Kelly Williams
+          </div>
+          <div class="salesperson-results">
+            35 closed deals
+          </div>
+          <div class="salesperson-info">
+            <a href="javascript:void(0)" onclick="toggleModal('profile')"><i class="material-icons"> account_box
+              </i><span>View profile</span></a><a href="javascript:void(0)" onclick="toggleModal('message')"><i
+                class="material-icons"> message </i><span>Message</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="close-button" onclick="toggleSidebar()">
+        <i class="material-icons">
+          close
+        </i></a>
+      <h2>Overview</h2>
+      <ul class="overview">
+        <li>
+          <strong>Deals</strong><br />
+          345
+        </li>
+        <li></li>
+        <li>
+          <strong>Current Value</strong><br />
+          $100,345
+        </li>
+      </ul>
+      <h2>Feed</h2>
+      <ul class="feed">
+        <li>
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" />
+          <div>
+            Miyah Myles<br />
+            Made a sale.
+          </div>
+        </li>
+        <li>
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" />
+          leo gill<br />
+          Made a sale.
+        </li>
+        <li>
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" />
+          Joseph Jones<br />
+          Made a sale.
+        </li>
+        <li>
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" />
+          Miyah Myles<br />
+          Made a sale.
+        </li>
+        <li>
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" />
+          Sarah Cummings<br />
+          Added a new lead.
+        </li>
+        <li>
+          <img src="https://randomuser.me/api/portraits/men/3.jpg" />
+          Wyatt Morris<br />
+          Added a new lead.
+        </li>
+      </ul>
+      <p>
+        <strong>Remember: Always be closing</strong>
+      </p>
+    </div>
+  </div>
+  <nav class="bottom-menu">
+    <a href="#" onclick="toggleSidebar('close')">
+      <i class="material-icons">
+        home
+      </i>
+    </a>
+    |
+    <a href="#sales-team" onclick="toggleSidebar('close')">
+      <i class="material-icons">
+        list
+      </i>
+    </a>
+    |
+    <a href="javascript:void(0)" onclick="toggleSidebar()">
+      <i class="material-icons menu-button">
+        menu_open
+      </i>
+    </a>
+  </nav>
+  <div class="modal profile-modal">
+    <div class="modal-content">
+      <div>
+        <a href="javascript:void(0)" class="close-button" onclick="toggleModal('profile')">
+          <i class="material-icons">
+            close
+          </i></a>
+      </div>
+      <img src="https://randomuser.me/api/portraits/lego/1.jpg" />
+      Placeholder Name <br />
+      125 Closed Deals <br />
+      <figure>
+        <svg width="100" height="100" class="chart">
+          <circle r="25" cx="50" cy="50" class="pie" style="stroke-dasharray: 125, 158" />
+        </svg>
+      </figure>
+    </div>
+  </div>
+</body>
+
+</html>
